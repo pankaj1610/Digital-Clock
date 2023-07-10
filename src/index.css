@@ -13,8 +13,12 @@ body {
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+.text-cont{
+	padding-top: 7rem;
+    font-size: 2rem;
+}
 .clock-com{
-	padding: 1rem 1rem;
+	padding: 1rem 0.5rem;
 	font-size: 5rem;
 	display: flex;
 	justify-content: center;
