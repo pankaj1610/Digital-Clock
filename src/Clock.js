@@ -23,13 +23,15 @@ const Clock = () => {
 		setSeconds(seconds);
 	}, 1000);
 
-	return (
+	return hours && minutes && seconds ? (
 		<div className="clock-container">
 			<div className="hrs-container clock-com">{pad(hours % 12)}:</div>
 			<div className="min-container clock-com">{minutes}:</div>
 			<div className="sec-container clock-com">{seconds}</div>
 			<span className="text-cont">{hours >= 12 ? "PM" : "AM"}</span>
 		</div>
+	) : (
+		""
 	);
 };
 
