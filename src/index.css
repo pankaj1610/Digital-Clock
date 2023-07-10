@@ -26,6 +26,5 @@ body {
 	align-items: center;
 }
 .clock-container{
-	border: 1px solid black;
 	display: flex;
 }
