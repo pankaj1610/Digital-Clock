@@ -1,11 +1,14 @@
 import { useState } from "react";
 
+const pad = (time) => (time.toString().length <= 1 ? "0" + time : time);
+
 const getCurrentTime = () => {
 	const curerntTime = new Date();
 	const hours = curerntTime.getHours();
 	const minutes = curerntTime.getMinutes();
 	const seconds = curerntTime.getSeconds();
-	return [hours, minutes, seconds];
+
+	return [hours, pad(minutes), pad(seconds)];
 };
 
 const Clock = () => {
@@ -22,7 +25,7 @@ const Clock = () => {
 
 	return (
 		<div className="clock-container">
-			<div className="hrs-container clock-com">{hours % 12}:</div>
+			<div className="hrs-container clock-com">{pad(hours % 12)}:</div>
 			<div className="min-container clock-com">{minutes}:</div>
 			<div className="sec-container clock-com">{seconds}</div>
 			<span className="text-cont">{hours >= 12 ? "PM" : "AM"}</span>
